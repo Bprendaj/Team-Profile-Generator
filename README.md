@@ -40,6 +40,6 @@
   ## questions
   [CLICK HERE to view my github page](https://github.com/Bprendaj)
 
-  if you have any questions, please email me at bprendaj2@gmail.com:purple_heart:
+  if you have any questions, please email me at bprendaj2@gmail.com:
 
   
