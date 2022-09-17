@@ -1,6 +1,7 @@
 const Employee = require('../lib/employee');
+const employee = new Employee('brikena', '888', "bprendaj2@gmail.com")
 
-// TEST INSTANTIATION OF OBJECT 
+// create employee object
 test('check if an employee object has been created', () => {
     // TEST INPUT
     const testName = 'brikena';
