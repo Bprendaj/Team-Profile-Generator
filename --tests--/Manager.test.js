@@ -1,4 +1,5 @@
 const Manager = require('../lib/manager');
+const manager = new Manager(testName, testEid, testEmail, testOfficeNumber);
 
 // TEST INSTANTIATION OF OBJECT 
 test('check if an intern object has been created', () => {
@@ -7,9 +8,6 @@ test('check if an intern object has been created', () => {
     const testEid = '888';
     const testEmail = 'bprendaj2@gmail.com';
     const testOfficeNumber = '1234'
-
-    // OPERATION
-    const manager = new Manager(testName, testEid, testEmail, testOfficeNumber);
     
     // TEST OUTPUT
     const resultName = manager.name;
@@ -52,11 +50,7 @@ test('check if getEid() function returns the eid', () => {
 
     // OPERATION
     const manager = new Manager(testName, testEid, testEmail, testOfficeNumber);
-    
-    // TEST OUTPUT
     const resultEid = manager.getEid();
-
-    // TEST
     expect(testEid).toEqual(resultEid);
 })
 
@@ -70,11 +64,7 @@ test('check if getEmail() function returns the email', () => {
 
     // OPERATION
     const manager = new Manager(testName, testEid, testEmail, testOfficeNumber);
-    
-    // TEST OUTPUT
     const resultEmail = manager.getEmail();
-
-    // TEST
     expect(testEmail).toEqual(resultEmail);
 })
 
@@ -88,11 +78,7 @@ test('check if getRole() function returns the position', () => {
 
     // OPERATION
     const manager = new Manager(testName, testEid, testEmail, testOfficeNumber);
-    
-    // TEST OUTPUT
     const resultRole = manager.getRole();
-
-    // TEST
     expect('Manager').toEqual(resultRole);
 })
 
@@ -106,10 +92,6 @@ test('check if getOfficeNumber() function returns the position', () => {
 
     // OPERATION
     const manager = new Manager(testName, testEid, testEmail, testOfficeNumber);
-    
-    // TEST OUTPUT
     const resultOfficeNumber = manager.getOfficeNumber();
-
-    // TEST
     expect(testOfficeNumber).toEqual(resultOfficeNumber);
 })

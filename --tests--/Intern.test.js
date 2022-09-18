@@ -27,89 +27,42 @@ test('check if an intern object has been created', () => {
 // TEST getName() FUNCTION
 test('check if getName() function returns the name', () => {
     // TEST INPUT
-    const testName = 'brikena';
-    const testEid = '888';
-    const testEmail = 'bprendaj2@gmail.com';
-    const testSchool = 'Fordham'
-
-    // OPERATION
+    const testValue = 'brikena';
     const intern = new Intern(testName, testEid, testEmail, testSchool);
-    
-    // TEST OUTPUT
     const resultName = intern.getName();
-
-    // TEST
     expect(testName).toEqual(resultName);
 })
 
 // TEST getEid() FUNCTION
 test('check if getEid() function returns the eid', () => {
     // TEST INPUT
-    const testName = 'brikena';
-    const testEid = '888';
-    const testEmail = 'bprendaj2@gmail.com';
-    const testSchool = 'Fordham'
 
-    // OPERATION
+    const testValue = '888';
     const intern = new Intern(testName, testEid, testEmail, testSchool);
-    
-    // TEST OUTPUT
     const resultEid = intern.getEid();
-
-    // TEST
     expect(testEid).toEqual(resultEid);
 })
 
 // TEST getEmail() FUNCTION
 test('check if getEmail() function returns the email', () => {
-    // TEST INPUT
-    const testName = 'brikena';
-    const testEid = '888';
-    const testEmail = 'bprendaj2@gmail.com';
-    const testSchool = 'Fordham'
-
-    // OPERATION
+    const testValue = 'bprendaj2@gmail.com';
     const intern = new Intern(testName, testEid, testEmail, testSchool);
-    
-    // TEST OUTPUT
     const resultEmail = intern.getEmail();
-
-    // TEST
     expect(testEmail).toEqual(resultEmail);
 })
 
 // TEST getRole() FUNCTION
-test('check if getRole() function returns the position', () => {
-    // TEST INPUT
-    const testName = 'brikena';
-    const testEid = '888';
-    const testEmail = 'bprendaj2@gmail.com';
-    const testSchool = 'Fordham'
-
-    // OPERATION
+test("getRole() should return \"Intern\"", () => {
+    const testValue = "Intern";
     const intern = new Intern(testName, testEid, testEmail, testSchool);
-    
-    // TEST OUTPUT
     const resultRole = intern.getRole();
-
-    // TEST
     expect('Intern').toEqual(resultRole);
 })
 
 // TEST getSchool() FUNCTION
-test('check if getSchool() function returns the position', () => {
-    // TEST INPUT
-    const testName = 'brikena';
-    const testEid = '888';
-    const testEmail = 'bprendaj2@gmail.com';
-    const testSchool = 'Fordham'
-
-    // OPERATION
+test("Can get school via getSchool()", () => {
+    const testValue = 'Fordham';
     const intern = new Intern(testName, testEid, testEmail, testSchool);
-    
-    // TEST OUTPUT
     const resultSchool = intern.getSchool();
-
-    // TEST
     expect(testSchool).toEqual(resultSchool);
 })

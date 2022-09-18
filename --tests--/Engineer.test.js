@@ -1,5 +1,6 @@
 const Engineer = require('../lib/engineer');
-
+const engineer = new Engineer(testName, testEid, testEmail, testGithub);
+    
 // TEST INSTANTIATION OF OBJECT 
 test('check if an engineer object has been created', () => {
     // TEST INPUT
@@ -8,9 +9,7 @@ test('check if an engineer object has been created', () => {
     const testEmail = 'bprendaj@gmail.com';
     const testGithub = 'bprendaj'
 
-    // OPERATION
-    const engineer = new Engineer(testName, testEid, testEmail, testGithub);
-    
+
     // TEST OUTPUT
     const resultName = engineer.name;
     const resultEid = engineer.eid;
@@ -34,11 +33,7 @@ test('check if getName() function returns the name', () => {
 
     // OPERATION
     const engineer = new Engineer(testName, testEid, testEmail, testGithub);
-    
-    // TEST OUTPUT
     const resultName = engineer.getName();
-
-    // TEST
     expect(testName).toEqual(resultName);
 })
 
@@ -52,11 +47,7 @@ test('check if getEid() function returns the eid', () => {
 
     // OPERATION
     const engineer = new Engineer(testName, testEid, testEmail, testGithub);
-    
-    // TEST OUTPUT
     const resultEid = engineer.getEid();
-
-    // TEST
     expect(testEid).toEqual(resultEid);
 })
 
@@ -70,46 +61,22 @@ test('check if getEmail() function returns the email', () => {
 
     // OPERATION
     const engineer = new Engineer(testName, testEid, testEmail, testGithub);
-    
-    // TEST OUTPUT
     const resultEmail = engineer.getEmail();
-
-    // TEST
     expect(testEmail).toEqual(resultEmail);
 })
 
 // TEST getRole() FUNCTION
-test('check if getRole() function returns the position', () => {
-    // TEST INPUT
-    const testName = 'brikena';
-    const testEid = '888';
-    const testEmail = 'bprendaj2@gmail.com';
-    const testGithub = 'bprendaj'
 
-    // OPERATION
+test("getRole() should return \"Engineer\"", () => {
     const engineer = new Engineer(testName, testEid, testEmail, testGithub);
-    
-    // TEST OUTPUT
     const resultRole = engineer.getRole();
-
-    // TEST
     expect('Engineer').toEqual(resultRole);
 })
 
 // TEST getGithub() FUNCTION
-test('check if getGithub() function returns the position', () => {
-    // TEST INPUT
-    const testName = 'brikena';
-    const testEid = '888';
-    const testEmail = "bprendaj2@gmail.com";
-    const testGithub = 'bprendaj'
+test("Can get GitHub username via getGithub()", () => {
 
-    // OPERATION
     const engineer = new Engineer(testName, testEid, testEmail, testGithub);
-    
-    // TEST OUTPUT
     const resultGithub = engineer.getGithub();
-
-    // TEST
     expect(testGithub).toEqual(resultGithub);
 })

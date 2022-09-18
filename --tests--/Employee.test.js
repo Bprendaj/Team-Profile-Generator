@@ -20,8 +20,8 @@ test('check if an employee object has been created', () => {
 })
 
 // TEST getName() FUNCTION
-describe("getName", () => {
-    it("Can get name via getName()", () => {
+test('check if getName() function returns the name', () => {
+    // TEST INPUT
     const testName = 'brikena';
     const testEid = '888';
     const testEmail = 'bprendaj2@gmail.com'
@@ -34,7 +34,7 @@ describe("getName", () => {
 
 // TEST getEid() FUNCTION
 describe("getId", () => {
-    it("Can get id via geteid()", () => {
+    it("Can get id via getd()", () => {
     // TEST INPUT
     const testName = 'brikena';
     const testEid = '888';
@@ -68,4 +68,5 @@ describe("getRole", () => {
     const employee = new Employee(testName, testEid, testEmail);
     const resultRole = employee.getRole();
     expect(e.getRole()).toBe(testValue);
+    })
 })
