@@ -8,9 +8,6 @@ test('check if an employee object has been created', () => {
     const testEid = '888';
     const testEmail = 'bprendaj2@gmail.com';
 
-    // OPERATION
-    const employee = new Employee(testName, testEid, testEmail);
-    
     // TEST OUTPUT
     const resultName = employee.name;
     const resultEid = employee.eid;
@@ -23,24 +20,21 @@ test('check if an employee object has been created', () => {
 })
 
 // TEST getName() FUNCTION
-test('check if getName() function returns the name', () => {
-    // TEST INPUT
+describe("getName", () => {
+    it("Can get name via getName()", () => {
     const testName = 'brikena';
     const testEid = '888';
     const testEmail = 'bprendaj2@gmail.com'
 
     // OPERATION
     const employee = new Employee(testName, testEid, testEmail);
-    
-    // TEST OUTPUT
     const resultName = employee.getName();
-
-    // TEST
     expect(testName).toEqual(resultName);
 })
 
 // TEST getEid() FUNCTION
-test('check if getEid() function returns the eid', () => {
+describe("getId", () => {
+    it("Can get id via geteid()", () => {
     // TEST INPUT
     const testName = 'brikena';
     const testEid = '888';
@@ -48,16 +42,13 @@ test('check if getEid() function returns the eid', () => {
 
     // OPERATION
     const employee = new Employee(testName, testEid, testEmail);
-    
-    // TEST OUTPUT
     const resultEid = employee.getEid();
-
-    // TEST
     expect(testEid).toEqual(resultEid);
 })
 
 // TEST getEmail() FUNCTION
-test('check if getEmail() function returns the email', () => {
+describe("getEmail", () => {
+    it("Can get email via getEmail()", () => {
     // TEST INPUT
     const testName = 'brikena';
     const testEid = '888';
@@ -65,27 +56,16 @@ test('check if getEmail() function returns the email', () => {
 
     // OPERATION
     const employee = new Employee(testName, testEid, testEmail);
-    
-    // TEST OUTPUT
     const resultEmail = employee.getEmail();
-
-    // TEST
     expect(testEmail).toEqual(resultEmail);
 })
 
 // TEST getRole() FUNCTION
-test('check if getRole() function returns the position', () => {
-    // TEST INPUT
-    const testName = 'brikena';
-    const testEid = '888';
-    const testEmail = 'bprendaj2@gmail.com'
+describe("getRole", () => {
+    it("getRole() should return \"Employee\"", () => {
 
     // OPERATION
     const employee = new Employee(testName, testEid, testEmail);
-    
-    // TEST OUTPUT
     const resultRole = employee.getRole();
-
-    // TEST
-    expect('Employee').toEqual(resultRole);
+    expect(e.getRole()).toBe(testValue);
 })
