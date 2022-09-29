@@ -80,3 +80,17 @@ test("Can get GitHub username via getGithub()", () => {
     const resultGithub = engineer.getGithub();
     expect(testGithub).toEqual(resultGithub);
 })
+
+// TEST getGithub() FUNCTION
+test('check if getGithub() function returns the position', () => {
+    // TEST INPUT
+    const testName = 'brikena';
+    const testEid = '888';
+    const testEmail = 'bprendaj2@gmail.com';
+    const testGithub = 'bprendaj'
+
+    // OPERATION
+    const engineer = new Engineer(testName, testEid, testEmail, testGithub);
+    const resultGithub = engineer.getGithub();
+    expect(testGithub).toEqual(resultGithub);
+})

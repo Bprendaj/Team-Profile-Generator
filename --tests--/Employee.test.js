@@ -1,6 +1,6 @@
 const Employee = require('../lib/employee');
 const employee = new Employee('brikena', '888', "bprendaj2@gmail.com")
-
+g
 // create employee object
 test('check if an employee object has been created', () => {
     // TEST INPUT
@@ -33,8 +33,7 @@ test('check if getName() function returns the name', () => {
 })
 
 // TEST getEid() FUNCTION
-describe("getId", () => {
-    it("Can get id via getd()", () => {
+test('check if getEid() function returns the eid', () => {
     // TEST INPUT
     const testName = 'brikena';
     const testEid = '888';
@@ -47,8 +46,7 @@ describe("getId", () => {
 })
 
 // TEST getEmail() FUNCTION
-describe("getEmail", () => {
-    it("Can get email via getEmail()", () => {
+test('check if getEmail() function returns the email', () => {
     // TEST INPUT
     const testName = 'brikena';
     const testEid = '888';
@@ -61,12 +59,15 @@ describe("getEmail", () => {
 })
 
 // TEST getRole() FUNCTION
-describe("getRole", () => {
-    it("getRole() should return \"Employee\"", () => {
+test('check if getRole() function returns the position', () => {
+
+        // TEST INPUT
+        const testName = 'brikena';
+        const testEid = '888';
+        const testEmail = 'bprendaj2@gmail.com'
 
     // OPERATION
     const employee = new Employee(testName, testEid, testEmail);
     const resultRole = employee.getRole();
     expect(e.getRole()).toBe(testValue);
     })
-})
